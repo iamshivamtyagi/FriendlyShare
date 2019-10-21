@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#EE1717</color>
+    <color name="colorPrimaryDark">#EE1717</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <!--Background Login Page Color-->
+
+    <color name="bg_start_color">#FFC200</color>
+    <color name="bg_end_color">#EE1717</color>
+
+    <!--Input Background Color-->
+
+    <color name="ip_start_color">#F508C2</color>
+    <color name="ip_end_color">#D3B91B</color>
+
+</resources>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "863070712682",
+    "firebase_url": "https://friendly-share.firebaseio.com",
+    "project_id": "friendly-share",
+    "storage_bucket": "friendly-share.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:863070712682:android:a1c5d4a011dfcf19262b13",
+        "android_client_info": {
+          "package_name": "com.example.friendlyshare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "863070712682-b5oa2h8lb5k5uvpk9brh06u4q5ips0f9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAxHje8Er_M1pn1ZTAPzOGQu8nhxqPcJE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "863070712682-b5oa2h8lb5k5uvpk9brh06u4q5ips0f9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
