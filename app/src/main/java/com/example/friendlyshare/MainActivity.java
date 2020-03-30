@@ -8,7 +8,6 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-import com.example.friendlyshare.UserInformation;
 import com.example.friendlyshare.fragment.CameraFragment;
 import com.example.friendlyshare.fragment.ChatFragment;
 import com.example.friendlyshare.fragment.StoryFragment;

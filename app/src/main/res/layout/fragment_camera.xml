@@ -35,7 +35,6 @@
     </LinearLayout>
 
 
-
     <Button
         android:id="@+id/capture"
         android:layout_width="50dp"
@@ -52,8 +51,7 @@
         android:layout_gravity="bottom|right"
         android:layout_margin="20dp"
         android:background="@drawable/round_button"
-        android:drawableLeft="@mipmap/ic_change_cam"
-        />
+        android:drawableLeft="@mipmap/ic_change_cam" />
 
 
 </FrameLayout>

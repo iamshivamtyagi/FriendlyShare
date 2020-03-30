@@ -7,7 +7,7 @@
     android:background="@drawable/back_design"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".RegistrationActivity">
+    tools:context=".loginRegistration.RegistrationActivity">
 
     <ScrollView
         android:layout_width="match_parent"

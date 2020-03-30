@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/back_design"
-    tools:context="com.example.snapchatclone.ShowCaptureActivity">
+    tools:context=".ShowCaptureActivity">
 
     <ImageView
         android:id="@+id/imageCaptured"

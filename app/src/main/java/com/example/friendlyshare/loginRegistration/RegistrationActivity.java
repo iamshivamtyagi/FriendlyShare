@@ -23,10 +23,12 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.Executor;
 
 public class RegistrationActivity extends AppCompatActivity {
 
     private Button mRegistration;
+
     private EditText mEmail, mPassword, mName;
 
     private TextView mSignInFromRegistration;
@@ -72,27 +74,52 @@ public class RegistrationActivity extends AppCompatActivity {
         mEmail = findViewById(R.id.email);
         mPassword = findViewById(R.id.password);
 
-
+        // triggered when registration button pressed
         mRegistration.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                // user name fetch from mName editText
                 final String name = mName.getText().toString();
+                // user email fetch from mEmail editText
                 final String email = mEmail.getText().toString();
+                // user password fetch from mPassword editText
                 final String password = mPassword.getText().toString();
+
+                // to register the user on firebase database
                 mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(RegistrationActivity.this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
+                        // if not successful simply show toast of error
                         if (!task.isSuccessful()) {
-                            Toast.makeText(getApplication(), "Sign in ERROR", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplication(), "Registration ERROR", Toast.LENGTH_SHORT).show();
                         } else {
+                            // to get unique firebase user Uid
                             String userId = mAuth.getCurrentUser().getUid();
+
+                            // this is to create child of user in the firebase database with unique id (Uid)
+                            // data saved in firebase database as :
+                            // Application_Firebase_Unique_Id
+                                                            // Users
+                                                                    // User1
+                                                                            // Email
+                                                                            // Name
+                                                                            // Photo
+                                                                    // User2
+                                                                            // Email
+                                                                            // Name
+                                                                            // Photo
+                                                                    // Multiple Users
+
+                            // i.e., connecting realtime database with unique authentication Uid
                             DatabaseReference currentUserDb = FirebaseDatabase.getInstance().getReference().child("users").child(userId);
 
+                            // creating HashMap to stor e data
                             Map userInfo = new HashMap<>();
                             userInfo.put("email", email);
                             userInfo.put("name", name);
                             userInfo.put("profileImageUrl", "default");
 
+                            // to update the database
                             currentUserDb.updateChildren(userInfo);
                         }
                     }
